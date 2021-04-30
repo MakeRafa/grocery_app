@@ -2,7 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, DateField, SelectField, SubmitField, FloatField, PasswordField
 from wtforms.ext.sqlalchemy.fields import QuerySelectField
 from wtforms.validators import DataRequired, Length, URL, ValidationError
-from grocery_app.models import ItemCategory, GroceryStore, GroceryItem
+from grocery_app.models import ItemCategory, GroceryStore, GroceryItem, User
 
 class SignUpForm(FlaskForm):
     username = StringField('User Name', validators=[DataRequired(), Length(min=3, max=25)])

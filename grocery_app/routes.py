@@ -3,9 +3,9 @@ from flask_login import login_user, logout_user, login_required, current_user
 
 from datetime import date, datetime
 
-from grocery_app.models import GroceryStore, GroceryItem
+from grocery_app.models import GroceryStore, GroceryItem, User
 # from grocery_app.forms import BookForm, AuthorForm, GenreForm
-from grocery_app.forms import GroceryStoreForm, GroceryItemForm
+from grocery_app.forms import GroceryStoreForm, GroceryItemForm, LoginForm, SignUpForm
 # Import app and db from events_app package so that we can run app
 from grocery_app import app, db
 
