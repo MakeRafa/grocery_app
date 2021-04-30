@@ -1,9 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <h1>Item - {{ item.name }}</h1>
-{% if current_user.is_authenticated %}
-    <p>{{item.title}} created by {{item.created_by.username}}</p>
-{% endif %}
+
 <p><img src="{{ item.photo_url }}" width="250px" height="250px"></p>
 
 <p><strong>Price:</strong> {{ item.price }}</p>
