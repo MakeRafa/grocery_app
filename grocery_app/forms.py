@@ -20,6 +20,16 @@ class LoginForm(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Log In')
 
+    # def validate_username(self, username):
+    #     user = User.query.filter_by(username=username.data).first()
+    #     if user is None:
+    #         raise ValidationError("NO user with that username. Please try loging in again")
+
+    # def validate_password(self, password):
+    #     user = User.query.filter_by(username=form.username.data).first()
+    #     if not bcrypt.check_password_hash(user.password, password_field.data):
+    #         raise ValidationError("Password did not match")
+
 class GroceryStoreForm(FlaskForm):
     """Form for adding/updating a GroceryStore."""
 
