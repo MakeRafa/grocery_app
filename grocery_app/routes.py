@@ -176,11 +176,13 @@ def add_to_shopping_list(item_id):
 
     user = User.query.get(current_user.id)
 
-    if item:
-        user.shopping_list_items.append(item)
-        db.session.commit()
+    user.shopping_list_items.append(item)
+    db.session.add(current_user)
+    db.session.commit()
 
-    return render_template('shopping_list.html', )
+    shopping_list = current_user.shopping_list_items
+
+    return render_template('shopping_list.html', shopping_list=shopping_list)
 
 
 @main.route('/shopping_list')
