@@ -1,7 +1,9 @@
 {% extends 'base.html' %} {% block content %}
 
 <h1>Store - {{ store.title }}</h1>
-
+{% if current_user.is_authenticated %}
+    <p>{{store.title}} created by {{store.created_by.username}}</p>
+{% endif %}
 <strong>Address:</strong> {{ store.address }}
 
 <h2>Items</h2>

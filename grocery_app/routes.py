@@ -169,3 +169,11 @@ def item_detail(item_id):
     # item = GroceryItem.query.get(item_id)
     return render_template('item_detail.html', item=item, form=form)
 
+@main.route('/add_to_shopping_list/<item_id>', methods=['POST'])
+def add_to_shopping_list(item_id):
+
+    
+
+@main.route('/shopping_list')
+@login_required
+def shopping_list():
