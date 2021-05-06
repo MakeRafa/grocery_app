@@ -4,11 +4,10 @@
 <h1>Your items</h1>
 
 <ul>
-{% for item in current_user.shopping_list %}
+{% for item in shopping_list %}
 
     {{item.name}}
     {{item.price}}
-    {{item.photo_url}}
 
     {% endfor %}
 </ul>

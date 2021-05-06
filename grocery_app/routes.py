@@ -170,6 +170,7 @@ def item_detail(item_id):
     return render_template('item_detail.html', item=item, form=form)
 
 @main.route('/add_to_shopping_list/<item_id>', methods=['POST'])
+@login_required
 def add_to_shopping_list(item_id):
     # creates item and gets current user 
     item = GroceryItem.query.get(item_id)
